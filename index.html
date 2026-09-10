@@ -1,1 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <title>Alliance Realty | Find Your Space</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<header class="navbar">
+
+    <a href="#" class="logo">
+        ALLIANCE<span>REALTY</span>
+    </a>
+
+    <nav>
+        <a href="#properties">Properties</a>
+        <a href="#locations">Locations</a>
+        <a href="#why-us">Why Us</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <a href="#visit" class="nav-btn">
+        Book a Visit
+    </a>
+
+</header>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <p class="eyebrow">
+            REAL ESTATE • MUMBAI
+        </p>
+
+        <h1>
+            Find a space
+            <br>
+            <i>that feels like yours.</i>
+        </h1>
+
+        <p class="hero-description">
+            Discover handpicked homes and investment opportunities
+            across Mumbai with Alliance Realty.
+        </p>
+
+
+        <!-- SEARCH -->
+
+        <div class="search-box">
+
+            <select id="location">
+                <option value="">Location</option>
+                <option value="Kandivali">Kandivali</option>
+                <option value="Borivali">Borivali</option>
+                <option value="Malad">Malad</option>
+                <option value="Goregaon">Goregaon</option>
+            </select>
+
+
+            <select id="bhk">
+                <option value="">BHK</option>
+                <option value="2">2 BHK</option>
+                <option value="3">3 BHK</option>
+                <option value="4">4 BHK</option>
+            </select>
+
+
+            <select id="budget">
+                <option value="">Budget</option>
+                <option value="2">Under ₹2 Cr</option>
+                <option value="4">₹2–4 Cr</option>
+                <option value="6">₹4–6 Cr</option>
+            </select>
+
+
+            <button onclick="searchProperties()">
+                Search
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- STATS -->
+
+<section class="stats">
+
+    <div>
+        <strong>500+</strong>
+        <span>Properties</span>
+    </div>
+
+    <div>
+        <strong>25+</strong>
+        <span>Developer Partners</span>
+    </div>
+
+    <div>
+        <strong>1K+</strong>
+        <span>Happy Clients</span>
+    </div>
+
+    <div>
+        <strong>10+</strong>
+        <span>Prime Locations</span>
+    </div>
+
+</section>
+
+
+
+<!-- PROPERTIES -->
+
+<section class="section" id="properties">
+
+    <div class="section-title">
+
+        <div>
+            <p class="eyebrow">EXPLORE</p>
+
+            <h2>
+                Featured properties
+            </h2>
+        </div>
+
+        <button onclick="showAll()">
+            View all →
+        </button>
+
+    </div>
+
+
+    <div class="property-grid">
+
+
+        <!-- PROPERTY 1 -->
+
+        <article
+            class="property-card"
+            data-location="Kandivali"
+            data-bhk="3"
+            data-price="5.75"
+        >
+
+            <div class="property-image image1">
+
+                <span>FEATURED</span>
+
+            </div>
+
+
+            <div class="property-content">
+
+                <div class="property-meta">
+
+                    <span>Kandivali East</span>
+
+                    <span>3 BHK</span>
+
+                </div>
+
+
+                <h3>
+                    Godrej Reserve
+                </h3>
+
+
+                <p>
+                    Premium residences • 1,450 sq.ft.
+                </p>
+
+
+                <div class="property-bottom">
+
+                    <strong>
+                        ₹5.75 Cr+
+                    </strong>
+
+                    <button onclick="openForm('Godrej Reserve')">
+                        Enquire →
+                    </button>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- PROPERTY 2 -->
+
+        <article
+            class="property-card"
+            data-location="Kandivali"
+            data-bhk="3"
+            data-price="4.24"
+        >
+
+            <div class="property-image image2">
+
+                <span>NEW LAUNCH</span>
+
+            </div>
+
+
+            <div class="property-content">
+
+                <div class="property-meta">
+
+                    <span>Kandivali</span>
+
+                    <span>3 BHK</span>
+
+                </div>
+
+
+                <h3>
+                    Codename NP1.2
+                </h3>
+
+
+                <p>
+                    Spacious homes • 20:5 payment plan
+                </p>
+
+
+                <div class="property-bottom">
+
+                    <strong>
+                        ₹4.24 Cr+
+                    </strong>
+
+                    <button onclick="openForm('Codename NP1.2')">
+                        Enquire →
+                    </button>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- PROPERTY 3 -->
+
+        <article
+            class="property-card"
+            data-location="Borivali"
+            data-bhk="4"
+            data-price="6.49"
+        >
+
+            <div class="property-image image3">
+
+                <span>PREMIUM</span>
+
+            </div>
+
+
+            <div class="property-content">
+
+                <div class="property-meta">
+
+                    <span>Borivali West</span>
+
+                    <span>4 BHK</span>
+
+                </div>
+
+
+                <h3>
+                    Alliance Signature
+                </h3>
+
+
+                <p>
+                    Luxury residences • Large carpet areas
+                </p>
+
+
+                <div class="property-bottom">
+
+                    <strong>
+                        ₹6.49 Cr+
+                    </strong>
+
+                    <button onclick="openForm('Alliance Signature')">
+                        Enquire →
+                    </button>
+
+                </div>
+
+            </div>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+
+<!-- PROPERTY MATCH -->
+
+<section class="match">
+
+    <div>
+
+        <p class="eyebrow">
+            SMART SEARCH
+        </p>
+
+        <h2>
+            Not sure what fits?
+            <br>
+            <i>Let us match you.</i>
+        </h2>
+
+        <p>
+            Tell us your budget, preferred location and lifestyle.
+            We'll help you find properties that actually make sense.
+        </p>
+
+        <button
+            class="main-btn"
+            onclick="openForm('Property Match')"
+        >
+            Find My Match →
+        </button>
+
+    </div>
+
+
+    <div class="match-card">
+
+        <div class="score">
+            92%
+        </div>
+
+        <p>
+            Your Property Match
+        </p>
+
+        <div class="progress">
+            <span></span>
+        </div>
+
+        <small>
+            Budget • Location • BHK • Lifestyle
+        </small>
+
+    </div>
+
+</section>
+
+
+
+<!-- LOCATIONS -->
+
+<section class="section" id="locations">
+
+    <p class="eyebrow">
+        DISCOVER
+    </p>
+
+    <h2>
+        Explore Mumbai
+    </h2>
+
+
+    <div class="locations">
+
+        <button onclick="filterLocation('Kandivali')">
+            Kandivali <span>→</span>
+        </button>
+
+        <button onclick="filterLocation('Borivali')">
+            Borivali <span>→</span>
+        </button>
+
+        <button onclick="filterLocation('Malad')">
+            Malad <span>→</span>
+        </button>
+
+        <button onclick="filterLocation('Goregaon')">
+            Goregaon <span>→</span>
+        </button>
+
+    </div>
+
+</section>
+
+
+
+<!-- WHY US -->
+
+<section class="why" id="why-us">
+
+    <div>
+
+        <p class="eyebrow">
+            WHY ALLIANCE
+        </p>
+
+        <h2>
+            Real advice.
+            <br>
+            Real options.
+        </h2>
+
+    </div>
+
+
+    <div class="why-grid">
+
+        <div>
+
+            <b>01</b>
+
+            <h3>
+                Curated choices
+            </h3>
+
+            <p>
+                We focus on properties that actually
+                fit your requirements.
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <b>02</b>
+
+            <h3>
+                Transparent guidance
+            </h3>
+
+            <p>
+                Clear project details and assistance
+                throughout your buying journey.
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <b>03</b>
+
+            <h3>
+                Site visit support
+            </h3>
+
+            <p>
+                From shortlisting to scheduling,
+                we make property visits simple.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- SITE VISIT -->
+
+<section class="visit" id="visit">
+
+    <div>
+
+        <p class="eyebrow">
+            READY WHEN YOU ARE
+        </p>
+
+        <h2>
+            See it in person.
+        </h2>
+
+        <p>
+            Book a site visit and let our property
+            experts take it from there.
+        </p>
+
+    </div>
+
+
+    <button
+        class="main-btn light"
+        onclick="openForm('Site Visit')"
+    >
+        Schedule a Site Visit →
+    </button>
+
+</section>
+
+
+
+<!-- FOOTER -->
+
+<footer id="contact">
+
+    <div>
+
+        <a class="logo">
+            ALLIANCE<span>REALTY</span>
+        </a>
+
+        <p>
+            Homes, investments & better decisions.
+        </p>
+
+    </div>
+
+
+    <div class="footer-links">
+
+        <a href="tel:+919999999999">
+            +91 99999 99999
+        </a>
+
+        <a href="mailto:hello@alliancerealty.in">
+            hello@alliancerealty.in
+        </a>
+
+        <a href="https://wa.me/919999999999">
+            WhatsApp ↗
+        </a>
+
+    </div>
+
+
+    <small>
+        © 2026 Alliance Realty. All rights reserved.
+    </small>
+
+</footer>
+
+
+
+<!-- POPUP FORM -->
+
+<div class="modal" id="modal">
+
+    <div class="modal-box">
+
+        <button
+            class="close"
+            onclick="closeForm()"
+        >
+            ×
+        </button>
+
+
+        <p class="eyebrow">
+            ALLIANCE REALTY
+        </p>
+
+
+        <h2 id="formTitle">
+            Let's talk.
+        </h2>
+
+
+        <p>
+            Leave your details and our team
+            will contact you.
+        </p>
+
+
+        <form onsubmit="submitForm(event)">
+
+            <input
+                type="text"
+                placeholder="Your name"
+                required
+            >
+
+            <input
+                type="tel"
+                placeholder="Phone number"
+                required
+            >
+
+            <input
+                type="email"
+                placeholder="Email"
+            >
+
+            <input
+                id="interest"
+                type="text"
+                placeholder="Project / requirement"
+            >
+
+            <button class="main-btn">
+                Send Enquiry →
+            </button>
+
+        </form>
+
+
+        <p id="success"></p>
+
+    </div>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
